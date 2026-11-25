@@ -1,0 +1,5 @@
+target/
+*.wp2app
+*.wp2icon
+.DS_Store
+Thumbs.db
