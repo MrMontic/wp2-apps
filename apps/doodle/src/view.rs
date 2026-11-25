@@ -689,8 +689,8 @@ mod tests {
     #[test]
     #[ignore]
     fn dump_previews() {
-        let out_dir = std::path::Path::new(r"C:\Users\rusya\.gemini\antigravity\brain\fb8755fe-2686-4950-a4ae-0546bbe7b103\scratch");
-        let _ = std::fs::create_dir_all(out_dir);
+        let out_dir = std::env::temp_dir().join("wp2_preview");
+        let _ = std::fs::create_dir_all(&out_dir);
         let save = |name: &str, px: &[u16]| {
             let mut bytes = Vec::with_capacity(px.len() * 2);
             for &c in px {
